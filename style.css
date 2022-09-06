@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.grid-container {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin: 0 auto;
+}
+
+.grid-container > header {
+  grid-column: span 3;
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
+  border-bottom: 1px solid black;
+}
+
+.grid-container > nav {
+  grid-column: span 1;
+  padding: 15px;
+  margin: 15px;
+  border-right: 1px solid black;
+}
+
+li {
+  text-decoration: underline;
+}
+
+.grid-container > article {
+  grid-column: span 1;
+  margin: 10px;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+div > h2 {
+  margin-bottom: 20px;
+}
+
+aside p {
+  margin-bottom: 8px;
+}
+
+div > p {
+  margin-bottom: 20px;
+  line-height: 2em;
+}
+
+.grid-container > aside {
+  grid-column: span 1;
+  padding: 15px;
+  margin: 15px;
+  border-left: 1px solid black;
+}
+
+.grid-container > footer {
+  grid-column: span 3;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+@media screen and (max-width: 960px) {
+  .grid-container > nav {
+    grid-column: span 3;
+    border-right: 0;
+    border-bottom: 1px solid black;
+  }
+
+  nav > p {
+    margin-bottom: 20px;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .grid-container > article {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .grid-container {
+    display: block;
+  }
+
+  .grid-container > aside {
+    padding-top: 30px;
+    border-left: 0;
+    border-top: 1px solid black;
+  }
+}
